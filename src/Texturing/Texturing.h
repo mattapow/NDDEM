@@ -18,6 +18,7 @@
 #include <regex>
 #include <limits>
 #include <experimental/filesystem>
+#include <map>
 
 extern bool blenderrender ;
 

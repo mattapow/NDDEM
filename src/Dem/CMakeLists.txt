@@ -20,6 +20,6 @@ if(EMSCRIPTEN)
     "-O3 --bind -s MODULARIZE=1 -s EXPORT_NAME='DEMND' -s EXTRA_EXPORTED_RUNTIME_METHODS=[getValue]"
  )
 else()
- target_compile_options(DEMND PUBLIC -g -O3 -fopenmp -Wall -Wextra)
- target_link_libraries(DEMND PUBLIC -g -O3 -fopenmp -lstdc++fs -lm -Wall -Wextra)
+ target_compile_options(DEMND PUBLIC -g -O3 -DNO_OPENMP -Wall -Wextra)
+ target_link_libraries(DEMND PUBLIC -g -O3 -DNO_OPENMP -lm -Wall -Wextra)
 endif()
